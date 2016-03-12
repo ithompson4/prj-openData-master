@@ -1,0 +1,41 @@
+{
+  "name": "prj-open-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "browserify js/animate-in.js > js/animate-in.min.js",
+    "build": "npm run build:js",
+    "build:search": "browserify  -t reactify -t brfs search.js > bundle.js",
+    "watch": "onchange 'js/animate-in.js' -- npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nascherman/prj-openData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nascherman/prj-openData/issues"
+  },
+  "homepage": "https://github.com/nascherman/prj-openData#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.6.5",
+    "classnames": "^2.2.3",
+    "dom-ready": "^1.0.6",
+    "domready": "^1.0.8",
+    "es6-promise": "^3.1.2",
+    "gsap": "^1.18.2",
+    "jquery": "^2.2.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-search-bar": "^1.1.4"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.0",
+    "reactify": "^1.1.1"
+  }
+}
